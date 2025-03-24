@@ -1,0 +1,252 @@
+body
+{
+    padding:0;
+    margin:0;
+}
+#player
+{
+    min-height:280px;
+}
+.xstream-video-container .xstream-video-loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  /* animation: rotate 1s linear infinite; */
+  display: none;
+  margin: 0 auto;
+}
+.xstream-video-container .xstream-video-loader::before,
+.xstream-video-container .xstream-video-loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  animation: prixClipFix 2s linear infinite;
+}
+.xstream-video-container .xstream-video-loader::after {
+  border-color: #ff3d00;
+  animation: prixClipFix 2s linear infinite,
+    rotate 0.5s linear infinite reverse;
+  inset: 6px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      100% 0,
+      100% 100%,
+      100% 100%,
+      100% 100%
+    );
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+.xstream-video-container .xstream-video-center-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.xstream-video-container .xstream-video-play-btn {
+  cursor: pointer;
+  background: #6868683b;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 16px;
+  height: 65px;
+  width: 65px;
+}
+.xstream-video-container .xstream-bottom-controller {
+  position: absolute;
+  bottom: 0;
+  transition: height 0.2s ease-out;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-color: #0000004d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.xstream-video-container .xstream-bottom-controller button {
+  padding-top: 4px;
+  height: 40px;
+  width: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.xstream-video-container .xstream-bottom-controller button:hover {
+  background-color: #ffffff66;
+}
+.xstream-video-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  /* font-size: 12px; */
+  background-color: #000;
+  /* min-height: 360; */
+}
+.xstream-video-container video {
+  width: 100%;
+  height: 100%;
+}
+.xstream-video-container #xstream_video_player {
+  width: 100%;
+  height: 100%;
+}
+.xstream-video-container .live-status-text-wrapper {
+  color: red;
+  font-size: 12px;
+  font-weight: 900;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+.xstream-video-container .xstream-hide {
+  overflow: hidden;
+  height: 0;
+}
+.xstream-video-container .setting-options-wrapper {
+  position: absolute;
+  bottom: 40px;
+  width: 100px;
+  right: 5px;
+  padding: 10px 0;
+  background-color: #000000a1;
+  border-radius: 10px;
+  display: none;
+}
+.xstream-video-container .setting-options-wrapper.show {
+  display: block;
+}
+
+.xstream-video-container .setting-options ul {
+  padding: 0;
+  margin: 0;
+}
+.xstream-video-container .setting-options ul li {
+  list-style: none;
+  padding: 8px 0 8px 28px;
+  cursor: pointer;
+}
+.xstream-video-container .setting-options ul li:hover {
+  background-color: #ffffff62;
+}
+.xstream-video-container .setting-options ul li.active::before {
+  content: "";
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23FFFFFF" viewBox="0 0 512 512"%3E%3Cpath d="M173.9 439.4l-166.4-166.4c-10-10-10-26.2 0-36.2l36.2-36.2c10-10 26.2-10 36.2 0L192 312.7 432.1 72.6c10-10 26.2-10 36.2 0l36.2 36.2c10 10 10 26.2 0 36.2l-294.4 297.4c-10 10-26.2 10-36.2 0z"/%3E%3C/svg%3E');
+  height: 11px;
+  width: 11px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 8px;
+  padding-top: 5px;
+  margin-top: 2px;
+}
+video::-webkit-media-controls { display: none; } 
+
+video::-webkit-media-controls {
+  display: none;
+}
+
+
+.xstream-video-container #xstream_video_player
+{ 
+  background-color: #000;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0;
+  position: relative;
+  vertical-align: top;
+   word-break: normal;
+}
+.xstream-video-container .xstream-error-message{
+  color: #ff0000;
+  text-align: center;
+  display: none;
+}
+.xstream-video-container .xstream-error-message h3{
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.xstream-video-container .xstream-error-message span{
+  color:#ffffffb3;
+}
+.xstream-video-container .xstream-error-message .xstream-video-try-again-btn{
+  margin-top: 20px;
+  cursor: pointer;
+  background: #6868683b;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 12px;
+  height: 50px;
+  width: 50px;
+}
+.xstream-controls-right
+{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+.xstream-controls-left
+{
+  display: flex; 
+  align-items: center;
+  color: #fff
+}
