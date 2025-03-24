@@ -2,7 +2,8 @@
 
 import { useEffect } from "react";
 import "./xstream-video-player.css";
-import { XStreamVideoPlayer } from "./xstream-video-player";
+// @ts-ignore
+import { XStreamVideoPlayer } from "./xstream-video-player.js";
 
 function App() {
   let init = false;
