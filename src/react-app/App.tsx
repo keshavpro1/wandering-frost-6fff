@@ -1,27 +1,29 @@
-// src/App.tsx
-
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./xstream-video-player.css";
-// @ts-ignore
-import { XStreamVideoPlayer } from "./xstream-video-player.js";
+// import { XStreamVideoPlayer } from "./xstream-video-player.js";
+
+import * as Flashphoner from '@flashphoner/websdk';
 
 function App() {
-  let init = false;
+  const playerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const player = new XStreamVideoPlayer({
-      container: `player`,
-      autoplay: true,
-    });
-    if (!init) {
-      player.init();
-      console.log(player);
-      init = true;
+     if (playerRef.current) {
+      
+      console.log(Flashphoner.init({}));
+      
+  //     const player = new XStreamVideoPlayer({
+  //       container: "player",
+  //       autoplay: true,
+  //     });
+  //     player.init();
     }
-  }, [XStreamVideoPlayer]);
+  }, []);
+
   return (
-    <>
-      <div id="player"></div>
-    </>
+    <div className="app-container">
+      <div ref={playerRef} id="player"></div>
+    </div>
   );
 }
 

@@ -14,6 +14,8 @@
     "preview_image_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/fc7b4b62-442b-4769-641b-ad4422d74300/public"
   },
   "dependencies": {
+    "@flashphoner/websdk": "^2.0.256",
+    "crypto-js": "^4.2.0",
     "hono": "4.7.1",
     "react": "19.0.0",
     "react-dom": "19.0.0"
@@ -22,6 +24,7 @@
     "@cloudflare/vite-plugin": "0.1.1",
     "@cloudflare/workers-types": "^4.20250204.0",
     "@eslint/js": "9.19.0",
+    "@types/crypto-js": "^4.2.2",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "@vitejs/plugin-react": "4.3.4",
