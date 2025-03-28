@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./xstream-video-player.css";
 import XStreamVideoPlayer from "./XStreamVideoPlayer";
-// import { XStreamVideoPlayer } from "./xstream-video-player.js";
 
 
 function App() {
