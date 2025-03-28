@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import "./xstream-video-player.css";
+import XStreamVideoPlayer from "./XStreamVideoPlayer";
 // import { XStreamVideoPlayer } from "./xstream-video-player.js";
 
-import XStreamVideoPlayer from "./XStreamVideoPlayer";
 
 function App() {
   const playerRef = useRef<HTMLDivElement>(null);
@@ -13,6 +13,8 @@ function App() {
         container: playerRef.current,
         autoplay: true,
       });
+      console.log(player);
+      
       player.init();
       initialized = true;
     }
@@ -64,7 +66,6 @@ function App() {
           </div>
         </div>
       </div>
-      {/* <XStreamVideoPlayer ref={playerRef} /> */}
     </div>
   );
 }
