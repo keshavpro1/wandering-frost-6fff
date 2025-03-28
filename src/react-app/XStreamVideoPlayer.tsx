@@ -1,6 +1,6 @@
 // src/App.tsx
 
-import { Component, ReactNode, 
+import { ReactNode, 
   // useEffect, useRef, useState 
 } from "react";
 
@@ -55,7 +55,7 @@ export class XStreamVideoPlayer  {
 
   
   public async init(): Promise<void> {
-    // await this.getStreamsName();
+    await this.getStreamsName();
     this.attachEventListeners();
     this.initializeElements();
     console.log(Flashphoner);
