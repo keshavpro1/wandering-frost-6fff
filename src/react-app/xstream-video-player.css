@@ -7,6 +7,11 @@ body
 {
     min-height:280px;
 }
+.xstream-video-container
+{
+  min-height:280px;
+
+}
 .xstream-video-container .xstream-video-loader {
   width: 48px;
   height: 48px;
