@@ -54,13 +54,9 @@ export class XStreamVideoPlayer {
     };
     this.mouseTimeout = null;
     
-    // Initialize the player
-    // this.init();
   }
 
   public async init()  {
-    console.log("fdsds");
-    
     // await this.getStreamsName();
     this.initializeElements();
     this.attachEventListeners();

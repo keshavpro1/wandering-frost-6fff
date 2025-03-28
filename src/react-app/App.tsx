@@ -13,8 +13,6 @@ function App() {
         container: playerRef.current,
         autoplay: true,
       });
-      console.log(player);
-      
       player.init();
       initialized = true;
     }
