@@ -1,12 +1,15 @@
 // src/App.tsx
 
-import { Component, ReactNode, useEffect, useRef, useState } from "react";
+import { Component, ReactNode, 
+  // useEffect, useRef, useState 
+} from "react";
+
 import "./xstream-video-player.css";
-import CryptoJS from "crypto-js";
+// import CryptoJS from "crypto-js";
 // @ts-ignore
 // import * as XStream from "./xstream-video-player.js";
 import * as Flashphoner from '@flashphoner/websdk';
-
+// @ts-ignore
 import { streamName, url, videoQuality, autoplay } from "../../config.js";
 
 interface XStreamVideoPlayerProps {
